@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .Webdev {
+        @apply  bg-sky-400
+    };
+  
+}
+.Blender {
+ 
+    background-color: rgb(207, 98, 61);
+}

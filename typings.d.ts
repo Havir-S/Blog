@@ -19,10 +19,15 @@ export interface Post {
     _id: string;
     _createdAt: string;
     title: string;
+    type: string;
     author: {
         name: string;
         image: string;
     },
+    categories: [{
+        title: string;
+        // image: string;
+    }],
     comments: [Comment];
     description: string;
     mainImage: {
