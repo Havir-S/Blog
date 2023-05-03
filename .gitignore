@@ -6,7 +6,8 @@
 .pnp.js
 
 # sanity
-sanityblog/node_modules
+/sanityblog
+# sanityblog/node_modules
 
 # testing
 /coverage
