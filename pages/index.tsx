@@ -6,8 +6,6 @@ import Header from '../components/Header'
 import {sanityClient, urlFor} from '../sanity'
 import { Post } from '../typings'
 
-
-
 interface Props {
   posts: [Post];
 }
@@ -19,7 +17,7 @@ export default function Home({ posts }: Props) {
     {/* // <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
     // <div className="bg-gradient-to-b from-gray-900 via-slate-900 to-black min-h-screen"> */}
         <Head>
-          <title>Krzysztof 'Havir' Szafran Blog</title>
+          <title>Krzysztof Szafran Blog</title>
           <link rel="icon" href="/foxyIco.svg" />
         </Head>
 
@@ -45,7 +43,7 @@ export default function Home({ posts }: Props) {
         </div>
 
         {/* POSTS */}
-        <div className='max-w-7xl mx-auto flex items-center justify-center min-h-[400px] mt-5 px-3 xl:px-0'>
+        <div className='max-w-7xl mx-auto flex flex-col-reverse sm:flex-row items-center justify-center min-h-[400px] mt-5 px-3 xl:px-0'>
           <div className='flex-grow '>
             <div className='grid  grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6 px-2 md:px-6'>
               {posts.map(post => {
@@ -75,8 +73,7 @@ export default function Home({ posts }: Props) {
               })}
             </div>
           </div>
-          <div className='flex text-center flex-col items-center gap-3 px-4 py-6 font-prompt h-fit w-[20%] text-xs md:text-base min-w-[100px] md:min-w-[200px] border  bg-gradient-to-t self-start rounded-lg text-white font-bo from-gray-900 via-slate-900 to-black'>
-
+          <div className='grid grid-cols-2 mb-6 sm:mb-0 w-[95%] sm:flex flex-wrap flex-row text-center  items-center gap-3 px-4 py-6 font-prompt h-fit justify-center mx-auto sm:w-[20%] text-xs md:text-base min-w-[100px] md:min-w-[200px] border  bg-gradient-to-t self-start rounded-lg text-white font-bo from-gray-900 via-slate-900 to-black'>
             <div className='flex flex-col gap-2 justify-center items-center cursor-pointer'>
               <div className='relative h-6 w-6 md:h-10 md:w-10'>
                 <Image src='/name.svg' fill className=' object-contain text-red-500' alt='' />

@@ -37,15 +37,18 @@ const Post = ({post}: Props) => {
     return (
     <main className='pb-12 bg-gray-100 relative' >
         <Header showReturn={true} />
-
-        <img className='w-full h-40 object-cover shadow-xl z-1 relative bg-fixed bg-cover' src={urlFor(post.mainImage).url()!} alt='' />
+        <div className='relative shadow-xl'>
+            <img className='w-full h-40 object-cover z-1 relative bg-cover' src={urlFor(post.mainImage).url()!} alt='' />
+            <div className='absolute w-full h-full top-0 left-0' style={{background: 'rgba(0,0,0,.3)'}} />
+        </div>
+        
         {/* <div className='w-full h-40 border border-red-500 z-1 relative bg-cover bg-' style={{backgroundImage: {"url('"} + urlFor(post.mainImage).url()! + {"')"}}} /> */}
         {/* <div className='w-full h-40 border border-red-500 z-1 relative bg-cover bg-fixed' style={{backgroundImage: `url('${urlFor(post.mainImage).url()!}')`}} /> */}
         <div className='bg-white w-fit mx-auto'>
         <article className='max-w-3xl shadow-md mx-auto p-5  '>
             
-            <h1 className='text-3xl mt-10 mb-3'>{post.title}</h1>
-            <h2 className='text-xl font-light  text-gray-500 mb-2'>{post.description}</h2>
+            <h1 className='text-xl md:text-3xl mt-2 md:mt-10 mb-3'>{post.title}</h1>
+            <h2 className='md:text-xl font-light  text-gray-500 mb-5 md:mb-2'>{post.description}</h2>
 
             <div className='flex items-center space-x-2'>
                 <img className='h-10 w-10 rounded-full' src={urlFor(post.author.image).url()!} alt='' />
